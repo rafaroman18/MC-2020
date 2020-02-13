@@ -1,0 +1,7 @@
+     Z2 <- X2
+(B) IF Z2 !=0 GOTO A
+     GOTO S
+(A) Z2--
+     Z1 <- X1+Y
+     Y <- Z1
+     GOTO B

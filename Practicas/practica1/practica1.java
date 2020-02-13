@@ -20,13 +20,14 @@ public class practica1 {
         // Creamos un marco
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setTitle("MC - Practica 1");
 
         // Creamos barra de herramientas
-        JMenuBar tbar = toolbar.toolbarP1();
+        JMenuBar tbar = toolbar.create();
 
         // Grafica
         JInternalFrame framegraph = new JInternalFrame(("Simuladores"), true, false, true, true);
-        framegraph.setSize(widthscreen/4, widthscreen/2);
+        framegraph.setSize(widthscreen/4, widthscreen/4);
         framegraph.setLocation(0, 0);
         framegraph.setVisible(true);
 

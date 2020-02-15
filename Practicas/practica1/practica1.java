@@ -21,7 +21,7 @@ public class practica1 {
         frame.setTitle("MC - Practica 1");
 
         // Fijamos el marco a un tamaño variable en cuanto al tamaño de la pantalla
-        frame.setSize(widthscreen / 2, widthscreen / 4);
+        frame.setSize(widthscreen / 2, widthscreen / 4 + 50);
         frame.setLocation(heightscreen / 2, widthscreen / 8);
         frame.setLayout(null);
         frame.setVisible(true);
@@ -35,8 +35,6 @@ public class practica1 {
         // Añadimos los componentes
         frame.add(graph);
         frame.setJMenuBar(tbar);
-
-        
     }
 
     public static void main(String[] args) {

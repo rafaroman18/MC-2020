@@ -6,6 +6,6 @@ import java.awt.event.*;
 
 public class buttons {
     public static JInternalFrame create(){
-            
+        
     }
 }

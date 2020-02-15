@@ -20,34 +20,37 @@ public class practica1 {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("MC - Practica 1");
 
-        // Creamos barra de herramientas
-        JMenuBar tbar = toolbar.create();
-
-        // Grafica
-        JInternalFrame framegraph = new JInternalFrame(("Simuladores"), true, false, true, true);
-        framegraph.setSize(widthscreen/4, widthscreen/4);
-        framegraph.setLocation(0, 0);
-        framegraph.setVisible(true);
-
-        Canvas grafica = new Canvas();
-        grafica.setBackground(Color.BLACK);
-        grafica.setFocusable(true);
-
-        // Añadimos los componentes
-        framegraph.add(grafica);
-        frame.add(framegraph);
-        frame.setJMenuBar(tbar);
-
         // Fijamos el marco a un tamaño variable en cuanto al tamaño de la pantalla
         frame.setSize(widthscreen / 2, widthscreen / 4);
         frame.setLocation(heightscreen / 2, widthscreen / 8);
         frame.setLayout(null);
         frame.setVisible(true);
+
+        // Creamos barra de herramientas
+        JMenuBar tbar = toolbar.create();
+
+        // Creamos la grafica
+        JInternalFrame graph = graphic.create(widthscreen);
+
+        // Añadimos los componentes
+        frame.add(graph);
+        frame.setJMenuBar(tbar);
+
+        
     }
 
-    
+    public static void main(String[] args) {
 
-    // // // // // *
+        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                createAndShowGUI();
+            }
+        });
+    }
+}
+
+
+   // // // // // *
 
     // // // // // *
 
@@ -79,13 +82,3 @@ public class practica1 {
     // // // // // *
     // // // // // * }
     // // // // // */
-
-    public static void main(String[] args) {
-
-        javax.swing.SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                createAndShowGUI();
-            }
-        });
-    }
-}

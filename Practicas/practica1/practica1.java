@@ -35,9 +35,13 @@ public class practica1 {
         // Creamos la botonera
         JInternalFrame but = buttons.create(frame, widthscreen);
 
+        //Creamos los simuladores
+        JInternalFrame sim = simulator.create(widthscreen);
+
         // Añadimos los componentes
         frame.add(graph);
         frame.add(but);
+        frame.add(sim);
         frame.setJMenuBar(tbar);
     
     }

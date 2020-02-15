@@ -12,7 +12,7 @@ public class buttons {
 		botonera.setLocation(widthscreen/4,0);
         botonera.setVisible(true);
 
-		JPanel grafica2 = new JPanel();
+        JPanel grafica2 = new JPanel();
 		
 		//Ayuda
 		JButton ayuda = new JButton("Ayuda");

@@ -5,6 +5,15 @@ import java.awt.*;
 
 public class practica1 {
 
+    public static void main(String[] args) {
+
+        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                createAndShowGUI();
+            }
+        });
+    }
+
     private static void createAndShowGUI() {
 
         JFrame.setDefaultLookAndFeelDecorated(true);
@@ -45,47 +54,5 @@ public class practica1 {
         frame.setJMenuBar(tbar);
     
     }
-
-    public static void main(String[] args) {
-
-        javax.swing.SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                createAndShowGUI();
-            }
-        });
-    }
+    
 }
-
-
-   // // // // // *
-
-    // // // // // *
-
-    // // // // // *
-    // // // // // * //###### GRAFICOS ###### JInternalFrame intgrafica = new
-    // JInternalFrame
-    // // // // // * (("Gráfica"),true,false,true,true); intgrafica.add(grafica);
-    // // // // // * intgrafica.setSize(800,800); intgrafica.setVisible(true);
-    // // // // // *
-    // // // // // * JDesktopPane desktop = new JDesktopPane();
-    // desktop.add(intgrafica);
-    // // // // // *
-    // // // // // * /*JInternalFrame ey = new JInternalFrame
-    // (("Gráfica"),true,false,true,true);
-    // // // // // * ey.setBackground(Color.CYAN);
-    // // // // // *
-    // // // // // * JInternalFrame ey2 = new JInternalFrame
-    // (("Gráfica"),true,false,true,true);
-    // // // // // * ey2.setBackground(Color.GREEN); ey2.setVisible(true);
-    // // // // // *
-    // // // // // * desktop.add(ey); desktop.add(ey2);
-    // // // // // *
-    // // // // // * //Añadimos todos los elementos
-    // frame.getContentPane().add(desktop);
-    // // // // // *
-    // // // // // * frame.setJMenuBar(toolbar);
-    // // // // // *
-    // // // // // * //Display the window. frame.pack(); frame.setVisible(true);
-    // // // // // *
-    // // // // // * }
-    // // // // // */

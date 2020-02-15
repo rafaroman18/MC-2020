@@ -44,9 +44,9 @@ public class buttons {
 		JTextField parametros = new JTextField("Parametros",10);
 
 		//Mostar Parámetros
-		JButton para = new JButton("Mostrar Parámetros");
+		JButton para = new JButton("Mostrar Parametros");
 		para.addActionListener((ActionEvent e) -> {
-			JFrame x = new JFrame("Mostrar Parámetros");
+			JFrame x = new JFrame("Mostrar Parametros");
 			JLabel l = new JLabel(parametros.getText());
 			x.setSize(170,100);
 			x.setVisible(true);

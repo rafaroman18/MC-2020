@@ -33,7 +33,7 @@ public class toolbar {
 			x.add(l);
 		});
 		
-		JMenuItem archivo2 = new JMenuItem("Archivo 2", KeyEvent.VK_1);
+		JMenuItem archivo2 = new JMenuItem("Archivo 2", KeyEvent.VK_2);
         archivo2.addActionListener((ActionEvent e) -> {
             JFrame x = new JFrame("Archivo 2");
 			JLabel l = new JLabel("Archivo 2");
@@ -45,7 +45,7 @@ public class toolbar {
 			x.add(l);
 		});
 		
-		JMenuItem archivo3 = new JMenuItem("Archivo 3", KeyEvent.VK_1);
+		JMenuItem archivo3 = new JMenuItem("Archivo 3", KeyEvent.VK_3);
         archivo3.addActionListener((ActionEvent e) -> {
             JFrame x = new JFrame("Archivo 3");
 			JLabel l = new JLabel("Archivo 3");
@@ -57,7 +57,7 @@ public class toolbar {
 			x.add(l);
         });
 
-        JMenuItem guardar = new JMenuItem("Guardar", KeyEvent.VK_2);
+        JMenuItem guardar = new JMenuItem("Guardar", KeyEvent.VK_G);
         guardar.addActionListener((ActionEvent e) -> {
             JFrame x = new JFrame("Guardar");
 			JLabel l = new JLabel("Guardar");
@@ -70,7 +70,7 @@ public class toolbar {
         });
 
 
-        JMenuItem guardarcomo = new JMenuItem("Guardar como...", KeyEvent.VK_3);
+        JMenuItem guardarcomo = new JMenuItem("Guardar como...", KeyEvent.VK_C);
         guardarcomo.addActionListener((ActionEvent e) -> {
             JFrame x = new JFrame("Guardar como...");
 			JLabel l = new JLabel("Guardar como...");
@@ -96,7 +96,7 @@ public class toolbar {
         });
 
 
-        JMenuItem deshacer = new JMenuItem("Deshacer", KeyEvent.VK_A);
+        JMenuItem deshacer = new JMenuItem("Deshacer", KeyEvent.VK_D);
         deshacer.addActionListener((ActionEvent e) -> {
             JFrame x = new JFrame("Deshacer");
 			JLabel l = new JLabel("Deshacer");

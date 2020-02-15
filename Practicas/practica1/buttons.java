@@ -7,7 +7,7 @@ public class buttons {
     public static JInternalFrame create(JFrame frame, int widthscreen){
 
         // Creamos la botonera y le asignamos un cierto tamaño
-        JInternalFrame botonera = new JInternalFrame (("Botonera"),true,false,true,true);
+        JInternalFrame botonera = new JInternalFrame (("Botonera"),false, false, false, false);
         botonera.setSize(widthscreen/4 - 10,widthscreen/16);
 		botonera.setLocation(widthscreen/4,0);
         botonera.setVisible(true);

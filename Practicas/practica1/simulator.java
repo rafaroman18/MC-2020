@@ -7,19 +7,18 @@ public class simulator {
 
     public static JInternalFrame create(int widthscreen){
 
-        JInternalFrame framegraph = new JInternalFrame(("Simuladores"), true, false, true, true);
-        framegraph.setSize(widthscreen / 4 - 10, (widthscreen / 4) - widthscreen/16 );
-        framegraph.setLocation(widthscreen/4,widthscreen/16);
-        framegraph.setVisible(true);
+        JInternalFrame framesim = new JInternalFrame(("Simuladores"), true, false, true, false);
+        framesim.setSize(widthscreen / 4 - 10, (widthscreen / 4) - widthscreen/16 );
+        framesim.setLocation(widthscreen/4,widthscreen/16);
+        framesim.setVisible(true);
 
         Canvas canv = new Canvas();
         canv.setBackground(Color.BLACK);
         canv.setFocusable(true);
 
-        framegraph.add(canv);
+        framesim.add(canv);
 
-        return framegraph;
+        return framesim;
     }
-
 
 }

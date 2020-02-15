@@ -40,7 +40,7 @@ public class practica1 {
 
         // Creamos la grafica
         JInternalFrame graph = graphic.create(widthscreen);
-
+        
         // Creamos la botonera
         JInternalFrame but = buttons.create(frame, widthscreen);
 

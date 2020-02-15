@@ -27,14 +27,19 @@ public class practica1 {
         frame.setVisible(true);
 
         // Creamos barra de herramientas
-        JMenuBar tbar = toolbar.create();
+        JMenuBar tbar = toolbar.create(frame);
 
         // Creamos la grafica
         JInternalFrame graph = graphic.create(widthscreen);
 
+        // Creamos la botonera
+        JInternalFrame but = buttons.create(frame, widthscreen);
+
         // Añadimos los componentes
         frame.add(graph);
+        frame.add(but);
         frame.setJMenuBar(tbar);
+    
     }
 
     public static void main(String[] args) {

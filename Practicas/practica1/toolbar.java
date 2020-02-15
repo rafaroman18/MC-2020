@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 public class toolbar {
 
-    public static JMenuBar create() {
+    public static JMenuBar create(JFrame frame) {
 
         // Creamos la barra
         JMenuBar toolbar = new JMenuBar();
@@ -19,102 +19,120 @@ public class toolbar {
         JMenu editar = new JMenu("Editar");
 
         //Tras eso, creamos los items (dentro de cada boton de la barra)
-        JMenuItem archivo1 = new JMenuItem("Abrir", KeyEvent.VK_1);
+        JMenu abrir = new JMenu("Abrir");
+		
+		JMenuItem archivo1 = new JMenuItem("Archivo 1", KeyEvent.VK_1);
         archivo1.addActionListener((ActionEvent e) -> {
-            JFrame x = new JFrame("Abrir");
-			JPanel y = new JPanel();
-			JLabel l = new JLabel("Abrir");
+            JFrame x = new JFrame("Archivo 1");
+			JLabel l = new JLabel("Archivo 1");
 			x.setSize(170,100);
 			x.setVisible(true);
-			x.setLocationRelativeTo(toolbar);
+			x.setLocationRelativeTo(frame);
 			l.setHorizontalAlignment(JLabel.CENTER);
     		l.setVerticalAlignment(JLabel.CENTER);			
-    		x.add(y);
+			x.add(l);
+		});
+		
+		JMenuItem archivo2 = new JMenuItem("Archivo 2", KeyEvent.VK_1);
+        archivo2.addActionListener((ActionEvent e) -> {
+            JFrame x = new JFrame("Archivo 2");
+			JLabel l = new JLabel("Archivo 2");
+			x.setSize(170,100);
+			x.setVisible(true);
+			x.setLocationRelativeTo(frame);
+			l.setHorizontalAlignment(JLabel.CENTER);
+    		l.setVerticalAlignment(JLabel.CENTER);			
+			x.add(l);
+		});
+		
+		JMenuItem archivo3 = new JMenuItem("Archivo 3", KeyEvent.VK_1);
+        archivo3.addActionListener((ActionEvent e) -> {
+            JFrame x = new JFrame("Archivo 3");
+			JLabel l = new JLabel("Archivo 3");
+			x.setSize(170,100);
+			x.setVisible(true);
+			x.setLocationRelativeTo(frame);
+			l.setHorizontalAlignment(JLabel.CENTER);
+    		l.setVerticalAlignment(JLabel.CENTER);			
 			x.add(l);
         });
 
-        JMenuItem archivo2 = new JMenuItem("Guardar", KeyEvent.VK_2);
-        archivo2.addActionListener((ActionEvent e) -> {
+        JMenuItem guardar = new JMenuItem("Guardar", KeyEvent.VK_2);
+        guardar.addActionListener((ActionEvent e) -> {
             JFrame x = new JFrame("Guardar");
-			JPanel y = new JPanel();
 			JLabel l = new JLabel("Guardar");
 			x.setSize(170,100);
 			x.setVisible(true);
-			x.setLocationRelativeTo(toolbar);
+			x.setLocationRelativeTo(frame);
 			l.setHorizontalAlignment(JLabel.CENTER);
     		l.setVerticalAlignment(JLabel.CENTER);			
-    		x.add(y);
 			x.add(l);
         });
 
 
-        JMenuItem archivo3 = new JMenuItem("Guardar como...", KeyEvent.VK_3);
-        archivo3.addActionListener((ActionEvent e) -> {
+        JMenuItem guardarcomo = new JMenuItem("Guardar como...", KeyEvent.VK_3);
+        guardarcomo.addActionListener((ActionEvent e) -> {
             JFrame x = new JFrame("Guardar como...");
-			JPanel y = new JPanel();
 			JLabel l = new JLabel("Guardar como...");
 			x.setSize(170,100);
 			x.setVisible(true);
-			x.setLocationRelativeTo(toolbar);
+			x.setLocationRelativeTo(frame);
 			l.setHorizontalAlignment(JLabel.CENTER);
     		l.setVerticalAlignment(JLabel.CENTER);			
-    		x.add(y);
 			x.add(l);
         });
 
 
-        JMenuItem editar1 = new JMenuItem("Preferencias", KeyEvent.VK_P);
-        editar1.addActionListener((ActionEvent e) -> {
+        JMenuItem preferencias = new JMenuItem("Preferencias", KeyEvent.VK_P);
+        preferencias.addActionListener((ActionEvent e) -> {
             JFrame x = new JFrame("Preferencias");
-			JPanel y = new JPanel();
 			JLabel l = new JLabel("Preferencias");
 			x.setSize(170,100);
 			x.setVisible(true);
-			x.setLocationRelativeTo(toolbar);
+			x.setLocationRelativeTo(frame);
 			l.setHorizontalAlignment(JLabel.CENTER);
     		l.setVerticalAlignment(JLabel.CENTER);			
-    		x.add(y);
 			x.add(l);
         });
 
 
-        JMenuItem editar2 = new JMenuItem("Deshacer", KeyEvent.VK_A);
-        editar2.addActionListener((ActionEvent e) -> {
+        JMenuItem deshacer = new JMenuItem("Deshacer", KeyEvent.VK_A);
+        deshacer.addActionListener((ActionEvent e) -> {
             JFrame x = new JFrame("Deshacer");
-			JPanel y = new JPanel();
 			JLabel l = new JLabel("Deshacer");
 			x.setSize(170,100);
 			x.setVisible(true);
-			x.setLocationRelativeTo(toolbar);
+			x.setLocationRelativeTo(frame);
 			l.setHorizontalAlignment(JLabel.CENTER);
     		l.setVerticalAlignment(JLabel.CENTER);			
-    		x.add(y);
 			x.add(l);
         });
 
-        JMenuItem editar3 = new JMenuItem("Rehacer", KeyEvent.VK_R);
-        editar3.addActionListener((ActionEvent e) -> {
+        JMenuItem rehacer = new JMenuItem("Rehacer", KeyEvent.VK_R);
+        rehacer.addActionListener((ActionEvent e) -> {
             JFrame x = new JFrame("Rehacer");
-			JPanel y = new JPanel();
 			JLabel l = new JLabel("Rehacer");
 			x.setSize(170,100);
 			x.setVisible(true);
-			x.setLocationRelativeTo(toolbar);
+			x.setLocationRelativeTo(frame);
 			l.setHorizontalAlignment(JLabel.CENTER);
     		l.setVerticalAlignment(JLabel.CENTER);			
-    		x.add(y);
 			x.add(l);
         });
 
 
-        // Añadimos los componentes
-        archivo.add(archivo1);
-        archivo.add(archivo2);
-        archivo.add(archivo3);
+		// Añadimos los componentes
+		abrir.add(archivo1);
+		abrir.add(archivo2);
+		abrir.add(archivo3);
 
-        editar.add(editar1);
-        editar.add(editar2);
-        editar.add(editar3);
+        archivo.add(abrir);
+        archivo.add(guardar);
+        archivo.add(guardarcomo);
+
+        editar.add(preferencias);
+        editar.add(deshacer);
+        editar.add(rehacer);
 
         toolbar.add(archivo);
         toolbar.add(editar);
